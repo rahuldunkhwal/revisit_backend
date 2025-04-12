@@ -3,8 +3,12 @@ const dotenv = require('dotenv');
 const pool = require('./db');
 const authRoutes = require('./routes/auth');
 const categoryRoutes = require('./routes/category');
+const cors = require('cors');
 
 dotenv.config();
+
+app.use(cors());
+
 
 const app = express();
 
